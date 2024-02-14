@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alphabet Clash</title>
+    <!-- font awesome icon link -->
+    <script src="https://kit.fontawesome.com/d01f881c33.js" crossorigin="anonymous"></script>
     <!-- daisy ui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <!--tailwind css link-->
@@ -12,6 +14,7 @@
     <!-- External Css link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body class="font-poppins">
 
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
@@ -26,14 +29,69 @@
 
         <!-- play-ground section -->
         <section class="play-gournd">
-            <div>
+            <div class="flex flex-col items-center gap-10 pt-16">
                 <!-- Screen -->
-
+                <div
+                    class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#252634] bg-[#FFFFFFB3]">
+                    <div class="flex justify-center">
+                        <p class="px-7 py-1 text-lg font-medium text-white bg-[#2f2941] rounded-b-md">Don't watch
+                            keyboard while playing...</p>
+                    </div>
+                    <div class="flex justify-center items-center h-full">
+                        <p class="text-black text-9xl font-semibold">Y</p>
+                    </div>
+                </div>
                 <!-- keyboard start -->
-                
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">q</kbd>
+                        <kbd class="kbd">w</kbd>
+                        <kbd class="kbd">e</kbd>
+                        <kbd class="kbd">r</kbd>
+                        <kbd class="kbd">t</kbd>
+                        <kbd class="kbd">y</kbd>
+                        <kbd class="kbd">u</kbd>
+                        <kbd class="kbd">i</kbd>
+                        <kbd class="kbd">o</kbd>
+                        <kbd class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">a</kbd>
+                        <kbd class="kbd">s</kbd>
+                        <kbd class="kbd">d</kbd>
+                        <kbd class="kbd">f</kbd>
+                        <kbd class="kbd">g</kbd>
+                        <kbd class="kbd">h</kbd>
+                        <kbd class="kbd">j</kbd>
+                        <kbd class="kbd">k</kbd>
+                        <kbd class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd class="kbd">z</kbd>
+                        <kbd class="kbd">x</kbd>
+                        <kbd class="kbd">c</kbd>
+                        <kbd class="kbd">v</kbd>
+                        <kbd class="kbd">b</kbd>
+                        <kbd class="kbd">n</kbd>
+                        <kbd class="kbd">m</kbd>
+                        <kbd class="kbd">/</kbd>
+                    </div>
+                </div>
                 <!-- keyboard end -->
 
                 <!-- life score -->
+                <div class="flex justify-between w-4/6">
+                    <button class="btn rounded-full bg-[#894189] text-white px-8 border-0 font-medium text-xl">
+                        Life
+                        <i class="fa-solid fa-heart-circle-bolt"></i>
+                        <span id="avalable-life">1</span>
+                    </button>
+                    <button class="btn rounded-full bg-[#360490] text-white px-8 border-0 font-medium text-xl">
+                        Score
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <span id="score">1</span>
+                    </button>
+                </div>
             </div>
         </section>
 
@@ -45,4 +103,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
