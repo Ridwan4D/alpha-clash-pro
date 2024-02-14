@@ -19,7 +19,7 @@
 
     <main class="bg-[#010313] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home section -->
-        <section class="home min-h-screen text-white flex flex-col justify-center items-center hidden">
+        <section class="home min-h-screen text-white flex flex-col justify-center items-center">
             <div class="flex flex-col items-center gap-6">
                 <h1 class="text-9xl font-anton">Alpha Clash</h1>
                 <p class="font-medium text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
@@ -28,7 +28,7 @@
         </section>
 
         <!-- play-ground section -->
-        <section class="play-gournd">
+        <section class="play-gournd hidden">
             <div class="flex flex-col items-center gap-10 pt-16">
                 <!-- Screen -->
                 <div
@@ -89,15 +89,23 @@
                     <button class="btn rounded-full bg-[#360490] text-white px-8 border-0 font-medium text-xl">
                         Score
                         <i class="fa-solid fa-circle-dollar-to-slot"></i>
-                        <span id="score">1</span>
+                        <span id="dollar">1</span>
                     </button>
                 </div>
             </div>
         </section>
 
         <!-- score section -->
-        <section class="score">
-
+        <section class="score flex justify-center items-center  min-h-screen hidden">
+            <div class="text-white text-center space-y-5 bg-[#FFFFFF33] p-10 rounded-xl">
+                <h1 class="text-7xl">
+                    <span class="font-extrabold">Score</span>
+                    :
+                    <span id="score">14</span>
+                </h1>
+                <button class="btn bg-white font-semibold text-2xl">Play Again</button>
+                <p>Practice will make you Pro..</p>
+            </div>
         </section>
     </main>
 
