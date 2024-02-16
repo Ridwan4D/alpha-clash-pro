@@ -6,7 +6,6 @@
 // }
 function handleKeyboardButtonPress(event) {
     const playerPressed = event.key;
-    console.log(playerPressed);
     if (playerPressed === "Escape") {
         gameOver()
     }

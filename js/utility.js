@@ -41,7 +41,7 @@ function getRandomAlphabet() {
     // create an alphabet array
     const alphabetString = "abcdefghijklmnopqrstuvwxyz"
     const alphabets = alphabetString.split("");
-    console.log(alphabets);
+    // console.log(alphabets);
 
     // get random index between 0-25
     const randomNumber = Math.random() * 25;
