@@ -6,6 +6,17 @@
 // }
 function handleKeyboardButtonPress(event) {
     const playerPressed = event.key;
+    console.log(playerPressed);
+    if (playerPressed === "Escape") {
+        gameOver()
+    }
+    if (playerPressed === "Enter") {
+        hideElementById("home-screen");
+        showElementById("play-ground");
+        setElementScoreWithId("current-life", 6)
+        continueGame();
+    }
+
 
     // get element 
     const currentAlphabetElement = document.getElementById("current-alphabet")
@@ -22,12 +33,15 @@ function handleKeyboardButtonPress(event) {
         continueGame();
     } else {
         // console.log("You lose");
-        const currentLife = getElementValueWithId("current-life");
-        const availableLife = currentLife - 1;
-        setElementScoreWithId("current-life", availableLife)
-
-        if (availableLife === 0) {
-            gameOver();
+        let currentLife = getElementValueWithId("current-life");
+        if (playerPressed === " ") {
+            currentLife = currentLife;
+        } else {
+            const availableLife = currentLife - 1;
+            setElementScoreWithId("current-life", availableLife)
+            if (availableLife === 0) {
+                gameOver();
+            }
         }
     }
 }
@@ -38,10 +52,7 @@ function continueGame() {
     const alphabet = getRandomAlphabet();
     // console.log("your random alphabet is: ",alphabet);
 
-    // set randomly generated alphabet
-    const currentAlphabet = document.getElementById("current-alphabet");
-    currentAlphabet.innerHTML = alphabet;
-
+    setTextElementById("current-alphabet", alphabet)
     setBackgroundColor(alphabet);
 }
 
@@ -58,10 +69,18 @@ function gameOver() {
     showElementById("score-section");
     const finalScore = getElementValueWithId("current-score");
     setElementScoreWithId("score", finalScore)
+    let highestScore = getElementValueWithId("high-score");
+    if (highestScore < finalScore) {
+        highestScore = finalScore;
+        setElementScoreWithId("high-score", highestScore)
+    }
 }
 
 
-function playAgain(){
+function playAgain() {
     hideElementById("score-section");
     showElementById("play-ground");
+    setElementScoreWithId("current-score", 0)
+    setElementScoreWithId("current-life", 5)
 }
+
